@@ -1,0 +1,22 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #524132;
+    font-weight: 600;
+    background-image: url('../img/background-image.png');
+    background-size: 100%;
+}
+.rodape {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0 20px 0;
+}
+.rodape p {
+    color: #66757F;
+    font-size: 12px;
+    font-weight: 400;
+}
+.contato {
+    display: flex;
+    gap: 15px;
+}

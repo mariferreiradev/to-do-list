@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+}
+.tarefas-title {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: #DD7676;
+    text-align: center;
+    padding: 30px 40px;
+    margin: 0;
+}
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.add-tarefas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+#input-tarefas {
+    border-radius: 30px;
+    border: 2px solid #DD7676;
+    padding: 0 15px;
+}
+.btn-inicio, .btn-add {
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #EFAFAF;
+    margin: 0;
+    height: 40px;
+    width: 90px;
+}
+.card-tarefas {
+    background-color: #ffffff;
+    border: 2px solid #DD7676;
+    border-radius: 30px;
+    box-shadow: #EFAFAF 10px 10px 0 0;
+    height: 250px;
+    width: 600px;
+    padding: 20px;
+}

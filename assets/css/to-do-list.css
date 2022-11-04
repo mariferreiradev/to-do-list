@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+}.to-do-list {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: #DD7676;
+    text-align: center;
+    margin: 0;
+    padding: 35px;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+.card-prazo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-card {
+    display: flex;
+    gap: 10px;
+}
+.btn-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #EFAFAF;
+    border-radius: 30px;
+    border: none;
+    width: 300px;
+    height: 265px;
+}
+.btn-tarefas, .btn-add-tarefas {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #524132;
+    background-color: #FFFA7F;
+    box-shadow: #66757F 6px 6px 0 0;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 30px;
+}
