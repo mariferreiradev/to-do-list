@@ -54,8 +54,8 @@ html, body {
 }
 .card-tarefas {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     background-color: #ffffff;
     border: 2px solid #DD7676;
     border-radius: 30px;
@@ -68,7 +68,10 @@ html, body {
 .card-tarefas div {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+}
+.card-tarefas div img {
+    margin-left: auto;
 }
 :checked + span {
     text-decoration: line-through;

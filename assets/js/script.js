@@ -15,6 +15,11 @@ function AddTarefas() {
     spanTarefas.innerText = entradaTarefa.value
     entradaTarefa.value = ''
 
+    let deletarTarefas = document.createElement('img')
+    deletarTarefas.setAttribute('src', './assets/img/icon-delete.png')
+    deletarTarefas.setAttribute('width', '20px')
+    divTarefas.append(deletarTarefas)
+
     listTarefas.prepend(divTarefas)
 }
 
