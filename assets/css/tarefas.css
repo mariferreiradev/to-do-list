@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
     margin: 0;
 }
@@ -23,25 +26,54 @@ html, body {
     gap: 30px;
 }
 #input-tarefas {
+    color: #524132;
     border-radius: 30px;
     border: 2px solid #DD7676;
     padding: 0 15px;
 }
+#input-tarefas:focus {
+    outline: none;
+}
 .btn-inicio, .btn-add {
-    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    color:#524132;
     border: none;
     border-radius: 50px;
     background-color: #EFAFAF;
+    padding: 10px;
     margin: 0;
-    height: 40px;
     width: 90px;
 }
+.btn-inicio:hover, .btn-add:hover {
+    background-color: #DD7676
+}
 .card-tarefas {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     background-color: #ffffff;
     border: 2px solid #DD7676;
     border-radius: 30px;
     box-shadow: #EFAFAF 10px 10px 0 0;
-    height: 250px;
-    width: 600px;
+    min-height: 260px;
+    max-height: auto;
+    width: 500px;
     padding: 20px;
+}
+.card-tarefas div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+:checked + span {
+    text-decoration: line-through;
+    color: #a27758;
+}
+input[type="checkbox" i] {
+    accent-color: #DD7676;
 }

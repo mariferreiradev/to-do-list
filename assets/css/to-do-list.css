@@ -13,7 +13,6 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 60px;
-    margin-bottom: 50px;
 }
 .card-prazo {
     display: flex;
@@ -39,10 +38,17 @@ body, html {
 .btn-tarefas, .btn-add-tarefas {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     color: #524132;
     background-color: #FFFA7F;
     box-shadow: #66757F 6px 6px 0 0;
     border-radius: 30px;
     border: none;
     padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-tarefas:hover, .btn-add-tarefas:hover{
+    box-shadow: #74838e 5px 5px 0 0;
+    padding: 8px 25px;
 }
