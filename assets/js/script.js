@@ -7,6 +7,7 @@ function addTarefas() {
     const tarefa = entradaTarefa.value
 
     addTarefaNaDom(estadoCheckbox, tarefa)
+    salvarTarefa(estadoCheckbox, tarefa)
     entradaTarefa.value = ''
 }
 
@@ -33,8 +34,33 @@ function addTarefaNaDom(estadoCheckbox, tarefa) {
     listTarefas.prepend(divTarefas)
 }
 
+function salvarTarefa(estadoCheckbox, tarefa) {
+    const tarefas = localStorage.getItem('tarefas') ?? ''
+    if(tarefas) {
+        const novasTarefas = `${estadoCheckbox}%%%${tarefa}@@@${tarefas}`
+        localStorage.setItem('tarefas', novasTarefas)
+    } else {
+        const novasTarefas = `${estadoCheckbox}%%%${tarefa}`
+        localStorage.setItem('tarefas', novasTarefas)     
+    }
+}
+
 function deletarTarefas (e) {
     listTarefas.removeChild(e.target.parentElement)
 }
 
+function carregarTarefas() {
+    const tarefas = localStorage.getItem('tarefas')
+    if (!tarefas) {
+        return
+    }
+    const listaTarefas = tarefas.split('@@@')
+    listaTarefas.forEach((tarefas) => {
+        const [estadoCheckbox, tarefa] = tarefas.split('%%%')
+        addTarefaNaDom(estadoCheckbox, tarefa)
+    });
+}
+
 btnAddTarefa.addEventListener('click', addTarefas)
+
+carregarTarefas()
