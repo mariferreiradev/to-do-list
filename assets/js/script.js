@@ -37,7 +37,7 @@ function addTarefaNaDom(estadoCheckbox, tarefa) {
 function salvarTarefa(estadoCheckbox, tarefa) {
     const tarefas = localStorage.getItem('tarefas') ?? ''
     if(tarefas) {
-        const novasTarefas = `${estadoCheckbox}%%%${tarefa}@@@${tarefas}`
+        const novasTarefas = `${tarefas}@@@${estadoCheckbox}%%%${tarefa}`
         localStorage.setItem('tarefas', novasTarefas)
     } else {
         const novasTarefas = `${estadoCheckbox}%%%${tarefa}`
@@ -46,7 +46,24 @@ function salvarTarefa(estadoCheckbox, tarefa) {
 }
 
 function deletarTarefas (e) {
-    listTarefas.removeChild(e.target.parentElement)
+    const tarefaParaRemover = e.target.parentElement
+    listTarefas.removeChild(tarefaParaRemover)
+    const texto = tarefaParaRemover.querySelector('span').innerText
+    const estado = tarefaParaRemover.querySelector('input').checked
+    const tarefas = localStorage.getItem('tarefas')
+    if (!tarefas){
+        return
+    }
+    const tarefasArray = tarefas.split('@@@')
+    const tarefasFiltradas = tarefasArray.filter((tarefa) => {
+        const [estadoAtualString, textoAtual] = tarefa.split('%%%')
+        const estadoAtual = estadoAtualString === 'true'
+        if (texto !== textoAtual || estado !== estadoAtual) {
+            return tarefa
+        }
+    })
+    const tarefasFiltradasString = tarefasFiltradas.join('@@@')
+    localStorage.setItem('tarefas', tarefasFiltradasString)
 }
 
 function carregarTarefas() {
@@ -56,9 +73,10 @@ function carregarTarefas() {
     }
     const listaTarefas = tarefas.split('@@@')
     listaTarefas.forEach((tarefas) => {
-        const [estadoCheckbox, tarefa] = tarefas.split('%%%')
+        const [estadoCheckboxString, tarefa] = tarefas.split('%%%')
+        const estadoCheckbox = estadoCheckboxString === 'true'
         addTarefaNaDom(estadoCheckbox, tarefa)
-    });
+    })
 }
 
 btnAddTarefa.addEventListener('click', addTarefas)
