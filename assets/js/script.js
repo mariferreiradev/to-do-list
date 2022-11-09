@@ -19,6 +19,7 @@ function addTarefaNaDom(estadoCheckbox, tarefa) {
     if (estadoCheckbox) {
         checkBoxTarefas.setAttribute('checked', true)
     }
+    checkBoxTarefas.addEventListener('change', atualizarTarefas)
     divTarefas.append(checkBoxTarefas);
 
     let spanTarefas = document.createElement('span')
@@ -77,6 +78,27 @@ function carregarTarefas() {
         const estadoCheckbox = estadoCheckboxString === 'true'
         addTarefaNaDom(estadoCheckbox, tarefa)
     })
+}
+
+function atualizarTarefas(e) {
+    const tarefaParaEditar = e.target.parentElement
+    const texto = tarefaParaEditar.querySelector('span').innerText
+    const estado = tarefaParaEditar.querySelector('input').checked
+    const tarefas = localStorage.getItem('tarefas')
+    if (!tarefas){
+        return
+    }
+    const tarefasArray = tarefas.split('@@@')
+    const tarefasEditadas = tarefasArray.map((tarefa) => {
+        const [estadoAtualString, textoAtual] = tarefa.split('%%%')
+
+        if(texto === textoAtual) {
+            return `${estado}%%%${texto}`
+        }
+        return tarefa
+    })
+    const tarefasEditadasString = tarefasEditadas.join('@@@')
+    localStorage.setItem('tarefas', tarefasEditadasString)
 }
 
 btnAddTarefa.addEventListener('click', addTarefas)
