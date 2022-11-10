@@ -3,7 +3,13 @@
 }
 body, html {
     margin: 0;
-}.to-do-list {
+}
+.tela-inicial {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.to-do-list {
     font-family: 'Pattaya', sans-serif;
     font-size: 80px;
     font-weight: 400;
@@ -12,9 +18,10 @@ body, html {
     margin: 0;
     padding: 35px;
 }
-.cards {
+.telas {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 60px;
 }
 .card-prazo {
@@ -54,4 +61,72 @@ body, html {
 .btn-tarefas:hover, .btn-add-tarefas:hover{
     box-shadow: #74838e 5px 5px 0 0;
     padding: 8px 25px;
+}
+
+/* Modal */
+
+.tela-modal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #754d4d73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-add-tarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 2px solid #DD7676;
+    border-radius: 30px;
+    box-shadow: #EFAFAF 10px 10px 0 0;
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+}
+.add-tarefas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#input-tarefas {
+    color: #524132;
+    border-radius: 30px;
+    border: 2px solid #DD7676;
+    padding: 10px 15px;
+}
+#input-tarefas:focus {
+    outline: none;
+}
+.btn-modal {
+    display: flex;
+    gap: 10px;
+}
+.btn-sair, .btn-add {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    color:#524132;
+    border: none;
+    border-radius: 50px;
+    background-color: #EFAFAF;
+    padding: 10px 16px;
+    width: 96px;
+    margin: 0;
+}
+.btn-sair:hover, .btn-add:hover {
+    background-color: #DD7676
+}
+.hidden {
+    display: none;
 }

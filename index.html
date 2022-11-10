@@ -18,35 +18,49 @@
     <header>
         <h1 class="to-do-list">To do List</h1>
     </header>
-    <main class="cards">
-        <div class="card-prazo">
-            <div class="title-card">
-                <img src="./assets/img/image-card-curto.png" height="45px">
-                <p>Curto prazo:</p>
+    <main class="telas">
+        <div class="tela-inicial">
+            <div class="card-prazo">
+                <div class="title-card">
+                    <img src="./assets/img/image-card-curto.png" height="45px"/>
+                    <p>Curto prazo:</p>
+                </div>
+                <div class="btn-card">
+                    <a class="btn-tarefas" href="./tarefas.html">Ir para tarefas</a>
+                    <button class="btn-add-tarefas">Add tarefas</button>
+                </div>
             </div>
-            <div class="btn-card">
-                <a class="btn-tarefas" href="./tarefas.html">Ir para tarefas</a>
-                <button class="btn-add-tarefas">Add tarefas</button>
+            <div class="card-prazo">
+                <div class="title-card">
+                    <img src="./assets/img/image-card-medio.png" height="45px"/>
+                    <p>Médio prazo:</p>
+                </div>
+                <div class="btn-card">
+                    <a class="btn-tarefas" href="./tarefas.html">Ir para tarefas</a>
+                    <button class="btn-add-tarefas">Add tarefas</button>
+                </div>
+            </div>
+            <div class="card-prazo">
+                <div class="title-card">
+                    <img src="./assets/img/image-card-longo.png" height="45px"/>
+                    <p>Longo prazo:</p>
+                </div>
+                <div class="btn-card">
+                    <a class="btn-tarefas" href="./tarefas.html">Ir para tarefas</a>
+                    <button class="btn-add-tarefas">Add tarefas</button>
+                </div>
             </div>
         </div>
-        <div class="card-prazo">
-            <div class="title-card">
-                <img src="./assets/img/image-card-medio.png" height="45px">
-                <p>Médio prazo:</p>
-            </div>
-            <div class="btn-card">
-                <a class="btn-tarefas" href="./tarefas.html">Ir para tarefas</a>
-                <button class="btn-add-tarefas">Add tarefas</button>
-            </div>
-        </div>
-        <div class="card-prazo">
-            <div class="title-card">
-                <img src="./assets/img/image-card-longo.png" height="45px">
-                <p>Longo prazo:</p>
-            </div>
-            <div class="btn-card">
-                <a class="btn-tarefas" href="./tarefas.html">Ir para tarefas</a>
-                <button class="btn-add-tarefas">Add tarefas</button>
+        <div class="tela-modal hidden">
+            <div class="modal-add-tarefas">
+                <div class="add-tarefas">
+                    <input type="text" name="" id="input-tarefas" placeholder="Escreva uma tarefa" />
+                    <div class="btn-modal">
+                        <button class="btn-add">Adicionar</button>
+                        <a class="btn-sair" href="./index.html">Sair</a>
+                    </div>
+                    <span class="alerta-add-tarefa hidden">Tarefa adicionada!</span>
+                </div>
             </div>
         </div>
     </main>
@@ -63,5 +77,6 @@
             </div>            
         </div>
     </footer>
+    <script src="./assets/js/script-inicial.js"></script>
 </body>
 </html>

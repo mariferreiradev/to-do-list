@@ -104,3 +104,4 @@ function atualizarTarefas(e) {
 btnAddTarefa.addEventListener('click', addTarefas)
 
 carregarTarefas()
+
