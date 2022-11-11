@@ -1,3 +1,5 @@
+import { salvarTarefa } from './local-storage.js'
+
 const modalAddTarefas = document.querySelector('.tela-modal')
 const inputModal = document.querySelector('#input-tarefas')
 const btnAddTarefasModal = document.querySelectorAll('.btn-add-tarefas')
@@ -22,6 +24,7 @@ function mostrarSpan() {
         inputModal.value = ''
     } else {
         spanModal.classList.remove('hidden')
+        salvarTarefa(false, inputModal.value)
         spanModal.innerHTML = "Tarefa adicionada!"
         inputModal.value = ''
     }
