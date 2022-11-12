@@ -6,6 +6,13 @@ const btnAddTarefasModal = document.querySelectorAll('.btn-add-tarefas')
 const btnaddModal = document.querySelector('.btn-add')
 const btnSairModal = document.querySelector('.btn-sair')
 const spanModal = document.querySelector ('.alerta-add-tarefa')
+const btnIrParaTarefas = document.querySelectorAll('.btn-tarefas')
+
+function loopBtnIrParaTarefas () {
+    btnIrParaTarefas.forEach((btnIrParaTarefas) => {
+        btnIrParaTarefas.addEventListener('click', separarPaginas)
+    });
+}
 
 function loopBtnAddTarefasModal() {
     btnAddTarefasModal.forEach((btnAddTarefasModal) => {
@@ -35,6 +42,12 @@ function removerModal() {
     spanModal.classList.add('hidden')
 }
 
+function separarPaginas(e) {
+    const pagina = e.target.dataset.pagina
+    localStorage.setItem ('paginaAtual', pagina)
+}
+
+loopBtnIrParaTarefas()
 loopBtnAddTarefasModal()
 
 btnSairModal.addEventListener('click', removerModal)
