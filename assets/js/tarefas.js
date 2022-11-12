@@ -4,6 +4,8 @@ const entradaTarefa = document.querySelector('#input-tarefas')
 const btnAddTarefa = document.querySelector('.btn-add')
 const listTarefas = document.querySelector('.card-tarefas')
 
+let chaveTarefa = 'tarefasCurtoPrazo'
+
 function addTarefas() {
     const estadoCheckbox = false
     const tarefa = entradaTarefa.value
@@ -92,7 +94,18 @@ function atualizarTarefas(e) {
     localStorage.setItem('tarefas', tarefasEditadasString)
 }
 
+function paginasLocalStorage() {
+    const pagAtual = localStorage.getItem('paginaAtual')
+    if(pagAtual === 'pag-um') {
+        chaveTarefa = 'tarefasCurtoPrazo'
+    } else if(pagAtual === 'pag-dois') {
+        chaveTarefa = 'tarefasMedioPrazo'
+    } else if(pagAtual === 'pag-tres') {
+        chaveTarefa = 'tarefasLongoPrazo'
+    }  
+}
+
 btnAddTarefa.addEventListener('click', addTarefas)
 
+paginasLocalStorage()
 carregarTarefas()
-
