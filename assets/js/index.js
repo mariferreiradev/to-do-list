@@ -8,6 +8,8 @@ const btnSairModal = document.querySelector('.btn-sair')
 const spanModal = document.querySelector ('.alerta-add-tarefa')
 const btnIrParaTarefas = document.querySelectorAll('.btn-tarefas')
 
+let chaveTarefa
+
 function loopBtnIrParaTarefas () {
     btnIrParaTarefas.forEach((btnIrParaTarefas) => {
         btnIrParaTarefas.addEventListener('click', separarPaginas)
@@ -20,8 +22,9 @@ function loopBtnAddTarefasModal() {
     });
 }
 
-function addTarefasModal() {
+function addTarefasModal(e) {
     modalAddTarefas.classList.remove('hidden')
+    chaveTarefa = e.target.dataset.pagina
 }
 
 function mostrarSpan() {
@@ -31,7 +34,7 @@ function mostrarSpan() {
         inputModal.value = ''
     } else {
         spanModal.classList.remove('hidden')
-        salvarTarefa(false, inputModal.value)
+        salvarTarefa(false, inputModal.value, chaveTarefa)
         spanModal.innerHTML = "Tarefa adicionada!"
         inputModal.value = ''
     }

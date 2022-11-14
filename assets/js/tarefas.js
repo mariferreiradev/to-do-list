@@ -11,7 +11,7 @@ function addTarefas() {
     const tarefa = entradaTarefa.value
 
     addTarefaNaDom(estadoCheckbox, tarefa)
-    salvarTarefa(estadoCheckbox, tarefa)
+    salvarTarefa(estadoCheckbox, tarefa, chaveTarefa)
     entradaTarefa.value = ''
 }
 
@@ -44,7 +44,7 @@ function deletarTarefas (e) {
     listTarefas.removeChild(tarefaParaRemover)
     const texto = tarefaParaRemover.querySelector('span').innerText
     const estado = tarefaParaRemover.querySelector('input').checked
-    const tarefas = localStorage.getItem('tarefas')
+    const tarefas = localStorage.getItem(chaveTarefa)
     if (!tarefas){
         return
     }
@@ -57,11 +57,11 @@ function deletarTarefas (e) {
         }
     })
     const tarefasFiltradasString = tarefasFiltradas.join('@@@')
-    localStorage.setItem('tarefas', tarefasFiltradasString)
+    localStorage.setItem(chaveTarefa, tarefasFiltradasString)
 }
 
 function carregarTarefas() {
-    const tarefas = localStorage.getItem('tarefas')
+    const tarefas = localStorage.getItem(chaveTarefa)
     if (!tarefas) {
         return
     }
@@ -77,7 +77,7 @@ function atualizarTarefas(e) {
     const tarefaParaEditar = e.target.parentElement
     const texto = tarefaParaEditar.querySelector('span').innerText
     const estado = tarefaParaEditar.querySelector('input').checked
-    const tarefas = localStorage.getItem('tarefas')
+    const tarefas = localStorage.getItem(chaveTarefa)
     if (!tarefas){
         return
     }
@@ -91,7 +91,7 @@ function atualizarTarefas(e) {
         return tarefa
     })
     const tarefasEditadasString = tarefasEditadas.join('@@@')
-    localStorage.setItem('tarefas', tarefasEditadasString)
+    localStorage.setItem(chaveTarefa, tarefasEditadasString)
 }
 
 function paginasLocalStorage() {
@@ -109,3 +109,4 @@ btnAddTarefa.addEventListener('click', addTarefas)
 
 paginasLocalStorage()
 carregarTarefas()
+
