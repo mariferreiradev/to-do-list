@@ -24,7 +24,14 @@ function loopBtnAddTarefasModal() {
 
 function addTarefasModal(e) {
     modalAddTarefas.classList.remove('hidden')
-    chaveTarefa = e.target.dataset.pagina
+    const pagAtual = e.target.dataset.pagina
+    if(pagAtual === 'pag-um') {
+        chaveTarefa = 'tarefasCurtoPrazo'
+    } else if(pagAtual === 'pag-dois') {
+        chaveTarefa = 'tarefasMedioPrazo'
+    } else if(pagAtual === 'pag-tres') {
+        chaveTarefa = 'tarefasLongoPrazo'
+    }
 }
 
 function mostrarSpan() {
