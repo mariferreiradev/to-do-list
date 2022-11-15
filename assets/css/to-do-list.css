@@ -127,6 +127,90 @@ body, html {
 .btn-sair:hover, .btn-add:hover {
     background-color: #DD7676
 }
+
+
+@media (min-width: 200px) and (max-width: 500px){
+    body {
+        background-repeat:inherit
+    }
+    .to-do-list {
+        font-size: 50px;
+        text-align: center;
+        margin: 0;
+        padding: 35px;
+    }
+    .tela-inicial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+    .title-card {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .title-card p{
+        font-size: 14px;
+    }
+    .title-card img{
+        width: 30px;
+        height: 30px;
+    }
+    .btn-card {
+        gap: 10px;
+        width: 200px;
+        height: 165px;
+    }
+    .btn-tarefas, .btn-add-tarefas {
+        font-size: 14px;
+        box-shadow: #66757F 4px 4px 0 0;
+        padding: 6px 20px;
+    }
+    .btn-tarefas:hover, .btn-add-tarefas:hover{
+        box-shadow: #74838e 3px 3px 0 0;
+        padding: 4px 15px;
+    }
+    .rodape p {
+        font-size: 10px;
+    }
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 20px 0;
+    }
+    .contato img{
+        width: 30px;
+        height: 30px;
+    }
+    /* Modal */
+    .modal-add-tarefas {
+        box-shadow: #EFAFAF 8px 8px 0 0;
+        height: 180px;
+        width: 250px;
+        padding: 20px;
+    }
+}
+@media (min-width: 501px) and (max-width: 1100px){
+    body {
+        background-repeat:inherit
+    }
+    .to-do-list {
+        font-size: 70px;
+        text-align: center;
+        margin: 0;
+        padding: 35px;
+    }
+    .tela-inicial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .hidden {
     display: none;
 }

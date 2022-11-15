@@ -34,6 +34,12 @@ html, body {
 #input-tarefas:focus {
     outline: none;
 }
+.btns-page-tarefas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 .btn-inicio, .btn-add {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -79,4 +85,51 @@ html, body {
 }
 input[type="checkbox" i] {
     accent-color: #DD7676;
+}
+
+@media (min-width: 200px) and (max-width: 580px){
+    body {
+        background-repeat:inherit
+    }
+    .tarefas-title {
+        font-size: 50px;
+        text-align: center;
+        margin: 0;
+        padding: 35px;
+    }
+    .add-tarefas {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 200px;
+    }
+    .add-tarefas input {
+        height: 40px;
+    }
+    .btns-page-tarefas{
+        gap: 10px;
+    }
+    .card-tarefas {
+        box-shadow: #EFAFAF 8px 8px 0 0;
+        height: 180px;
+        width: 250px;
+        padding: 20px;
+    }
+    .rodape p {
+        font-size: 10px;
+    }
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 20px 0;
+    }
+    .contato img{
+        width: 30px;
+        height: 30px;
+    }
 }
