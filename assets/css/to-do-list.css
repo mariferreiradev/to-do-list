@@ -135,18 +135,13 @@ body, html {
     }
     .to-do-list {
         font-size: 50px;
-        text-align: center;
-        margin: 0;
         padding: 35px;
     }
     .tela-inicial {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         gap: 40px;
     }
     .title-card {
-        display: flex;
         align-items: center;
         gap: 5px;
     }
@@ -200,14 +195,10 @@ body, html {
     }
     .to-do-list {
         font-size: 70px;
-        text-align: center;
-        margin: 0;
         padding: 35px;
     }
     .tela-inicial {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 }
 

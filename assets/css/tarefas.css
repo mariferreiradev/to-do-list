@@ -93,14 +93,10 @@ input[type="checkbox" i] {
     }
     .tarefas-title {
         font-size: 50px;
-        text-align: center;
-        margin: 0;
         padding: 35px;
     }
     .add-tarefas {
-        display:flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 10px;
         width: 200px;

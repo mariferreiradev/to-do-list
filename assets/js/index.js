@@ -7,6 +7,7 @@ const btnaddModal = document.querySelector('.btn-add')
 const btnSairModal = document.querySelector('.btn-sair')
 const spanModal = document.querySelector ('.alerta-add-tarefa')
 const btnIrParaTarefas = document.querySelectorAll('.btn-tarefas')
+const body = document.querySelector('body')
 
 let chaveTarefa
 
@@ -23,6 +24,8 @@ function loopBtnAddTarefasModal() {
 }
 
 function addTarefasModal(e) {
+    window.scrollTo(0,0)
+    body.style.overflow = 'hidden'
     modalAddTarefas.classList.remove('hidden')
     const pagAtual = e.target.dataset.pagina
     if(pagAtual === 'pag-um') {
@@ -50,6 +53,7 @@ function mostrarSpan() {
 function removerModal() {
     modalAddTarefas.classList.add('hidden')
     spanModal.classList.add('hidden')
+    body.style.overflow = 'initial'
 }
 
 function separarPaginas(e) {
