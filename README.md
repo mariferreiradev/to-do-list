@@ -14,14 +14,14 @@
 <br />
 <div align="center">
 
-  ## Versão Desktop
+  ### Versão Desktop
   
   <br />
   <img src="./assets/img/to-do-list-pc.png" alt="Gerenciador de tarefas" />
   <br />
   <br />
 
-  ## Versão Mobile
+  ### Versão Mobile
 
   <img src="./assets/img/to-do-list-celular.png" alt="Gerenciador de tarefas" height = "400px"/>
 </div>
