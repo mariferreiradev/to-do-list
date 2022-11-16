@@ -13,7 +13,12 @@
 
 <br />
 <div align="center">
+  <h2>Versão Desktop </h2>
+  <br />
   <img src="./assets/img/to-do-list-pc.png" alt="Gerenciador de tarefas" />
+  <br />
+  <br />
+  <h2>Versão Mobile </h2>
   <img src="./assets/img/to-do-list-celular.png" alt="Gerenciador de tarefas" height = "400px"/>
 </div>
 <br />
