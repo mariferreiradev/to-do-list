@@ -42,7 +42,6 @@
    ```
 2. Abra o index.html com um navegador
 
-
 ## Contato
 
 Mariana Ferreira - [@mariferreiradev](https://www.linkedin.com/in/mariferreiradev/) - mariferreira.dev@gmail.com
